@@ -1,7 +1,7 @@
 ﻿using System;
 using ReversiRestApi.Interfaces;
 
-namespace ReversiRestApi.Controllers
+namespace ReversiRestApi.Models
 {
     public class Spel : ISpel
     {

@@ -64,12 +64,12 @@
     <option name="coveragePercentColumnWidth" value="18" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="17" />
+    <option name="symbolColumnWidth" value="82" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 88% 126/1051" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 71% 317/1112" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />

@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using ReversiRestApi.Controllers;
+using ReversiRestApi.Models;
 using ReversiRestApi.Interfaces;
 
 namespace TestReversiRestApi
