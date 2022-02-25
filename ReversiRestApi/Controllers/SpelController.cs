@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ReversiRestApi.Interfaces;
 using ReversiRestApi.Models;
+using ReversiRestApi.Requests;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -42,11 +44,19 @@ namespace ReversiRestApi.Controllers
         //     return "value";
         // }
         //
-        // // POST api/values
-        // [HttpPost]
-        // public void Post([FromBody] string value)
-        // {
-        // }
+        // POST api/spel
+        [HttpPost]
+        public void Post([FromBody] SpelRequest spelRequest)
+        {
+            Spel spel = new Spel()
+            {
+                Token = new Guid().ToString(),
+                Speler1Token = spelRequest.Speler1Token,
+                Omschrijving = spelRequest.Omschrijving,
+            };
+            
+            this.iRepository.AddSpel(spel);
+        }
         //
         // // PUT api/values/5
         // [HttpPut("{id}")]

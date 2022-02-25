@@ -30,6 +30,7 @@ namespace TestReversiRestApi.Repository
             Spellen = new List<Spel> {spel1, spel2, spel3};
         }
 
+        [Test]
         public void TestAddSpel()
         {
             Spel spel = new Spel()
@@ -44,11 +45,13 @@ namespace TestReversiRestApi.Repository
             Assert.AreEqual(this.Spellen.Count, this._repository.GetSpellen().Count);
         }
 
+        [Test]
         public void TestGetSpellen()
         {
             Assert.AreEqual(3, this._repository.GetSpellen().Count);
         }
 
+        [Test]
         public void TestGetSpelDescriptionWithWaitingPlayers()
         {
             List<String> descriptions = new List<String>()
