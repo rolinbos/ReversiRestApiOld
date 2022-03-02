@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b8wz8ruT0nHMEMumbEamKrvzxNkX+ABadXVCdwrQQ72JT7DQzRwu36Fd6lwAizoKYUIiAXmrAbixCqaPo17/0g==",
+  "dgSpecHash": "j4Qqn4oOJQ04Q1O8t+z96JKrkIbyFRGHan27H09GFp/tv9xnK+zkcVsule5LFfkf6h8aqrnLpLjz941xHtDJdQ==",
   "success": true,
   "projectFilePath": "/Users/rolin/Code/ReversiRestApi/TestReversiRestApi/TestReversiRestApi.csproj",
   "expectedPackageFiles": [

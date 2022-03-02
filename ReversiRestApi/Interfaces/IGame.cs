@@ -3,15 +3,15 @@ namespace ReversiRestApi.Interfaces
 {
     public enum Kleur { Geen, Wit, Zwart };
 
-    public interface ISpel
+    public interface IGame
     {
         int ID { get; set; }
-        string Omschrijving { get; set; }
+        string Description { get; set; }
 
-        //het unieke token van het spel
+        //het unieke token van het Game
         string Token { get; set; }
-        string Speler1Token { get; set; }
-        string Speler2Token { get; set; }
+        string Player1Token { get; set; }
+        string Player2Token { get; set; }
 
         Kleur[,] Bord { get; set; }
         Kleur AandeBeurt { get; set; }

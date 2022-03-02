@@ -3,7 +3,7 @@ using ReversiRestApi.Interfaces;
 
 namespace ReversiRestApi.Models
 {
-    public class Spel : ISpel
+    public class Game : IGame
     {
         private const int bordOmvang = 8;
         private readonly int[,] richting = new int[8, 2] {
@@ -17,10 +17,10 @@ namespace ReversiRestApi.Models
                                 { -1, -1 } };       // naar linksboven
 
         public int ID { get; set; }
-        public string Omschrijving { get; set; }
+        public string Description { get; set; }
         public string Token { get; set; }
-        public string Speler1Token { get; set; }
-        public string Speler2Token { get; set; }
+        public string Player1Token { get; set; }
+        public string Player2Token { get; set; }
 
         private Kleur[,] bord;
         public Kleur[,] Bord
@@ -36,11 +36,11 @@ namespace ReversiRestApi.Models
         }
 
         public Kleur AandeBeurt { get; set; }
-        public Spel()
+        public Game()
         {
             Token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
-            Token = Token.Replace("/", "q");    // slash mijden ivm het opvragen van een spel via een api obv het token
-            Token = Token.Replace("+", "r");    // plus mijden ivm het opvragen van een spel via een api obv het token
+            Token = Token.Replace("/", "q");    // slash mijden ivm het opvragen van een Game via een api obv het token
+            Token = Token.Replace("+", "r");    // plus mijden ivm het opvragen van een Game via een api obv het token
 
             Bord = new Kleur[bordOmvang, bordOmvang];
             Bord[3, 3] = Kleur.Wit;
@@ -53,7 +53,7 @@ namespace ReversiRestApi.Models
 
         public void Pas()
         {
-            // controleeer of er geen zet mogelijk is voor de speler die wil passen, alvorens van beurt te wisselen.
+            // controleeer of er geen zet mogelijk is voor de Gameer die wil passen, alvorens van beurt te wisselen.
             if (IsErEenZetMogelijk(AandeBeurt))
                 throw new Exception("Passen mag niet, er is nog een zet mogelijk");
             else

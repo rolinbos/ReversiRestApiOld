@@ -34,7 +34,7 @@ namespace ReversiRestApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ReversiRestApi", Version = "v1" });
             });
             
-            services.AddSingleton<ISpelRepository, SpelRepository>();
+            services.AddSingleton<IGameRepository, GameRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1302,6 +1302,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
           "Swashbuckle.AspNetCore": "5.6.3"
         },
         "compile": {
