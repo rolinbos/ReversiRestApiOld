@@ -39,10 +39,12 @@ namespace ReversiRestApi.Controllers
         }
         
         // GET api/game/waitings
-        [HttpGet("waitings")]
-        public ActionResult<IEnumerable<Game>> GetWaitingGames()
+        [HttpGet("waiting")]
+        public ActionResult<String> GetWaitingGames()
         {
-            return this.iRepository.GetWaitingGames().ToList();
+            return JsonConvert.SerializeObject(
+                this.iRepository.GetWaitingGames().ToList(), Formatting.Indented
+            );
         }
         
         // GET api/game/{gameToken}
@@ -69,9 +71,9 @@ namespace ReversiRestApi.Controllers
         // PUT /api/game/take-turn/
         // Token from game + token from player
         [HttpPut("take-turn")]
-        public ActionResult<String> TakeTurn()
+        public ActionResult<String> TakeTurn(string gameToken, string playerToken, string field)
         {
-            return "";
+            return $"Token: {gameToken} player: {playerToken} field: {field}";
         }
         
         // PUT /api/game/give-up

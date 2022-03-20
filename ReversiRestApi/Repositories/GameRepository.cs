@@ -25,7 +25,6 @@ namespace ReversiRestApi.Repositories
             game3.Player1Token = "stuvwx";
             game3.Description = "Na dit Game wil ik er nog een paar Gameen tegen zelfde tegenstander";
             
-
             this.Games = new List<Game> {game1, game2, game3};
         }
 
